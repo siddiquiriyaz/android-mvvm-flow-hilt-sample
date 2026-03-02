@@ -34,4 +34,12 @@ UI → ViewModel → Repository → API
 
 ---
 
-## 📂 Project Structure
+## 🔄 State Management
+
+The UI observes a sealed UiState class:
+
+- Loading
+- Success
+- Error
+
+This ensures clean and predictable state updates.
