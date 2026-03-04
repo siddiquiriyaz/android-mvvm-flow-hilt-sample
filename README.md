@@ -74,11 +74,13 @@ Features included:
 
 The UI observes a sealed UiState class to handle different screen states.
 
+```
 UiState
-├── Idle
-├── Loading
-├── Success
-└── Error
+ ├── Idle
+ ├── Loading
+ ├── Success
+ └── Error
+```
 
 State Descriptions
 - Idle – Default state before any action occurs
@@ -90,20 +92,22 @@ This approach ensures predictable UI updates and clear state transitions.
 
 ## 🔁 Reactive Data Flow
 
+```
 User Action
-↓
+    ↓
 Fragment
-↓
+    ↓
 ViewModel
-↓
+    ↓
 Repository
-↓
+    ↓
 API Request
-↓
+    ↓
 Emit UiState
-↓
+    ↓
 Fragment observes StateFlow
-↓
+    ↓
 UI updates automatically
+```
 
 Using StateFlow ensures the UI always receives the latest state and remains consistent across lifecycle changes.
